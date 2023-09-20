@@ -1,28 +1,21 @@
-let xpos =180;
+let xpos =150;
+let ypos =200;
+
+
+let rectwidth =300;
+let rectheight =200;
 function setup() {
     createCanvas(600,600);
 }
 
 function draw() {
     background(200,20,20);
-    //rect(xpos,10,30,30);
-    //print(mouseX,mouseY);
-    rect(mouseX,mouseY,30,30);
-
-    if (mouseX > width/2) {
-        if (mouseY > height/2) {
-            fill(200,10,200);
-        } else{  
-            fill(0,255,0);
+    if(xpos < mouseX && mouseX < (xpos+rectwidth) &&
+    mouseY > ypos && mouseY < (ypos+rectheight)
+    ){
+        fill(20,200,20);
+    }else{
+        fill(255);
+    }
+    rect(xpos,ypos,rectwidth,rectheight);
         }
-    } else{  
-        if (mouseY > height/2) {
-            fill(10,10,200);
-        } else{  
-            fill(0,255,0);
-        }
-
-}
-
-
-}
