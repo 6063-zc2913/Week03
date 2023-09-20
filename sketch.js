@@ -1,21 +1,17 @@
-let xpos =150;
-let ypos =200;
+let eDiam = 50;
 
-
-let rectwidth =300;
-let rectheight =200;
 function setup() {
     createCanvas(600,600);
 }
 
 function draw() {
-    background(200,20,20);
-    if(xpos < mouseX && mouseX < (xpos+rectwidth) &&
-    mouseY > ypos && mouseY < (ypos+rectheight)
-    ){
-        fill(20,200,20);
-    }else{
-        fill(255);
+    background(200,200,200);
+    fill("pink");
+
+    
+    for(let xpos = 0; xpos <= width; xpos+= eDiam) {
+        for(let ypos = 0; ypos <= height; ypos+= eDiam) {
+            ellipse(xpos, ypos, eDiam, eDiam);
     }
-    rect(xpos,ypos,rectwidth,rectheight);
-        }
+}
+}
